@@ -2,13 +2,13 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../index.css";
 
-function DashBoard() {
+function AdminDashBoard() {
   const navigate = useNavigate();
 
   const handleLogout = async () => {
     try {
       // Send a request to the backend logout endpoint
-      const response = await fetch("http://localhost:3000/api/auth/logout", {
+      const response = await fetch("http://localhost:4000/api/auth/logout", {
         method: "POST", // Or 'GET', depending on your backend
         credentials: "include", // Ensure cookies are included
       });
@@ -29,13 +29,12 @@ function DashBoard() {
 
   return (
     <div>
-      <h1>Userportal</h1>
+      <h1>Adminportal</h1>
       <hr />
-      <p>Du är inne users.</p>
-
+      <p>Du är inne admin.</p>
       <button onClick={handleLogout}>Logout</button>
     </div>
   );
 }
 
-export default DashBoard;
+export default AdminDashBoard;

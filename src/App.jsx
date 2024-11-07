@@ -1,8 +1,9 @@
 // App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LoginPage from "./components/LoginPage"; // Adjust the path as necessary
-import Dashboard from "./components/DashBoard.jsx"; // Adjust the path as necessary
+import LoginPage from "./components/LoginPage"; //
+import Dashboard from "./components/DashBoard.jsx";
+import AdminDashboard from "./components/AdminDashboard";
 import RegisterPage from "./components/RegisterPage.jsx";
 
 const App = () => {
@@ -13,6 +14,8 @@ const App = () => {
           <Route path="/" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/admindashboard" element={<AdminDashboard />} />
+
           {/* Fallback for unknown routes */}
         </Routes>
       </div>
